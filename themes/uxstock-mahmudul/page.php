@@ -14,10 +14,11 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<?php
+	<div class="uxstock-internal-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+						<?php
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
@@ -30,9 +31,11 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 <?php
-get_sidebar();
 get_footer();
