@@ -1,0 +1,157 @@
+/*
+Theme Name:uxstock
+Theme URI: http://underscores.me/
+Author: Mahmudul Hasan Selim
+Author URI: http://mahmudul.ml
+Description: uxuxstock Simple Wordpress Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain:uxstock-mahmudul
+*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+
+body{font-family: 'Roboto', sans-serif;}
+h1,h2,h3,h4,h5,h6{font-family: 'Noto Serif', serif;}
+.site-logo a{
+color: red;
+}
+.header-area{
+	padding: 30px 0;
+}
+.header-right-content{
+	position: relative;
+}
+body{
+	font-size:15px;
+	line-height:1.7;
+}
+.stock-contact-box {
+	display: inline-block;
+	position: relative;
+	padding-left:46px;
+	margin-left: 15px;
+
+}
+
+.stock-contact-box h3{
+	color: #333;
+	margin: 0;
+	margin-top: 5px;
+	padding-left: 45px;
+	font-size: 15px;
+
+
+}
+.stock-cart{
+	border: 1px solid #e0e9ee;
+	text-align: center;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 53px;
+	width: 53px;
+	line-height:46px;
+
+
+}
+.stock-cart span{
+	background: #278cc1 none repeat scroll 0 0;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	line-height: 30px;
+	position: absolute;
+	right: -20px;
+	top: -10px;
+	width: 30px;
+
+}
+.stock-contact-box i{
+	border: 1px solid #e0e9ee;
+	text-align: center;
+	border-radius: 50%;
+	height: 42px;
+	width: 45px;
+	line-height:36px;
+
+}
+
+
+
+.mainmenu{
+	border-top:1px solid #d9e4e9;
+	margin-top:25px;
+	font-size:17px;
+	 
+}
+.mainmenu a{
+	color:#333333;
+	
+}
+.mainmenu ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+.mainmenu li{
+	display:inline-block;
+	position:relative;
+	
+}
+.mainmenu li a{
+	display:block;
+	padding:20px 30px 20px 0;
+
+}
+
+
+.site-footer{
+	background-color:#2e2d2f;
+	color:#8e9397;
+}
+.site-footer a{
+	color:#afb9c0;
+}
+
+.site-footer h4.widget-title{
+	color:#fff;
+}
+.site-footer ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height:2.1;
+}
+
+.stock-footer-bottom{
+	border-top:1px solid #383d40;
+	padding:20px 20;
+}
+.social-icon{
+	font-size:16px;
+	text-align:right;
+}
+
+.social-icon a{
+	display:inline-block;
+	padding-left:20px;
+	color:#fff;
+}
+
+.stock-footer-bottom ul{
+	text-align:center;
+	line-height:1.7;
+}
+.stock-footer-bottom li{
+	display:inline-block;
+}
+
+.site-footer .widget{
+	padding:40px 0;
+	margin:0;
+}
