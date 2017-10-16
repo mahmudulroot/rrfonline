@@ -65,24 +65,31 @@ $options[]    = array(
               'button_title'    => 'Add New',
               'accordion_title' => 'Add New button',
               'fields'          => array(
+                  
          array(
                   'id'    => 'type',
                   'type'  => 'select',
                   'title' => 'Buttons Type',
+                   'desc'=>'Select Button Type',
                   'options'    =>
                     array(
                          'bordered'    => 'Bordered buttons',
                          'boxed'     => 'Boxed Buttons',
                       
                       ),
-                  
+                   
                 ),
+                
+                
          array(
                   'id'    => 'text',
                   'type'  => 'text',
                   'title' => 'Buttons Text',
+                  'desc'=>'type Button text name',
                   'default' => 'get Free Consultung',
                 ),
+                
+                
          array(
                   'id'    => 'link_type',
                   'type'  => 'select',
@@ -90,16 +97,18 @@ $options[]    = array(
                  'options'    => 
                  array(
                          '1'  => 'WordPress',
-                         '2'     => 'Exter Link',
+                         '2'  => 'Exter Link',
                       
                       ),
                 ),
+                
+                
          array(
                   'id'    => 'link_to_page',
                   'type'  => 'select',
                   'title' => 'Select Page',
                  'options'    => 'page',
-                 'dependancy'=>array('link_type','==','1' ),
+                 'dependency'=>array('link_type','==','1' ),
     
                 ),
                 
@@ -107,27 +116,25 @@ $options[]    = array(
                   'id'    => 'link_to_external',
                   'type'  => 'text',
                   'title' => 'type URL',
-                 'dependancy'=>array('link_type','==','2' ),
+                 'dependency'=>array('link_type','==','2' ),
     
                 ),
-                
-   
              ),
-              ),
+         ),
      array(
           'id'    => 'enable_overly',
           'type'  => 'switcher',
           'title' => 'Enable Overly',
-          'default'=>'false'
+          'default'=>'true'
             
           ),
           
      array(
           'id'    => 'overly_percentage',
           'type'  => 'text',
-          'title' => 'Enable Percentage',
+          'title' => 'Overly Percentage',
           'default'=>'70',
-          'desc'=>'Type overly Percentage '
+          'desc'=>'Type overly Percentage in number'
             
           ),
           
@@ -150,3 +157,4 @@ $options[]    = array(
 }
 
 add_filter( 'cs_metabox_options', 'uxstock_framework_options' );
+

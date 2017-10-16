@@ -73,6 +73,8 @@ function uxstock_slides_shortcode($atts){
         $post_content = get_the_content();
         $list .= '
         <div style="background-image:url('.get_the_post_thumbnail_url($idd,'lage').')" class="uxstock-slide-item">;
+
+
            <div class="uxstock-slide-table">
                 <div class="uxstock-slide-tablecell">
                     <div class="container">

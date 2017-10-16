@@ -15,10 +15,10 @@ if(!defined ('ABSPATH')){
         register_post_type('slide',
              array(
                    'labels' =>array(
-                   'name' =>__('slide'),
+                   'name' =>__('slides'),
                    'singular_name' =>__('slide')
                        ),
-                        'supports' =>array('title','post-thumbnail','editor','page-attributes'),
+                        'supports' =>array('title','thumbnail','editor','page-attributes'),
                         'public' => false,
                         'show_ui' => true,
                        
@@ -50,8 +50,8 @@ if (is_plugin_active('js_composer/js_composer.php')) {
 
 function uxstock_toolkit_files(){
 
-	wp_enqueue_style('owl-carousel',plugin_dir_url(__FILE__).'asssets/css/owl.carousel.css');
-	wp_enqueue_style('owl-carousel',plugin_dir_url(__FILE__).'asssets/css/owl.carousel.js',array('jquery'),'3.1.7',true );
+	wp_enqueue_style('owl-carousel',plugin_dir_url(__FILE__).'assets/css/owl.carousel.min.css');
+	wp_enqueue_script('owl-carousel',plugin_dir_url(__FILE__).'assets/js/owl.carousel.min.js',array('jquery'),'3.1.7',true );
 }
 
 add_action('wp_enqueue_scripts','uxstock_toolkit_files');
