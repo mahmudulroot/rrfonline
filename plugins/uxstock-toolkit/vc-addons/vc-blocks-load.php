@@ -18,13 +18,17 @@ class uxstockVCExtendsAddonsClass
 
 	public function uxstockIntegratewithVC(){
 		//Check iF Visual composer Is not Install 
-		if( ! defined('WP_VC_VERSION')){
+		if(!defined(WPB_VC_VERSION)){
 
 			add_action('admin_notices',array($this,'uxstockshowVersionnotices'));
 		}
 
 		//Visual Composer Addons
+		
 		include UXSTOCK_ACC_PATH.'/vc-addons/vc-slide.php';
+		include UXSTOCK_ACC_PATH.'/vc-addons/vc-logo-carosel.php';
+		include UXSTOCK_ACC_PATH.'/vc-addons/vc-service.php';
+		
 	}
 
 	//show Visual Composer 
