@@ -10,7 +10,25 @@ if(!defined ('ABSPATH')){
   define('UXSTOCK_ACC_URL',WP_PLUGIN_URL.'/'.plugin_basename(dirname(__FILE__)).'/');
   define('UXSTOCK_ACC_PATH',  plugin_dir_path(__FILE__));
 
-    function uxstock_toolkit_get_post_list(){
+    
+    add_action('init','Stock_theme_custom_post');
+   function Stock_theme_custom_post(){
+        register_post_type('slide',
+             array(
+                   'labels' =>array(
+                   'name' =>__('slides'),
+                   'singular_name' =>__('slide')
+                       ),
+                        'supports' =>array('title','thumbnail','editor','page-attributes'),
+                        'public' => false,
+                        'show_ui' => true,
+                       
+                 )
+             );
+    
+  }
+
+  function uxstock_toolkit_get_post_list(){
 
       $args = wp_parse_args(array(
           'post_type'=>'slide',
@@ -46,22 +64,6 @@ if(!defined ('ABSPATH')){
 
 
 
-    add_action('init','Stock_theme_custom_post');
-   function Stock_theme_custom_post(){
-        register_post_type('slide',
-             array(
-                   'labels' =>array(
-                   'name' =>__('slides'),
-                   'singular_name' =>__('slide')
-                       ),
-                        'supports' =>array('title','thumbnail','editor','page-attributes'),
-                        'public' => false,
-                        'show_ui' => true,
-                       
-                 )
-             );
-    
-  }
 
 //  Print Shortcode In Widgets
   add_filter('widget_text','do_shortcode');
@@ -75,6 +77,7 @@ require_once(UXSTOCK_ACC_PATH.'vc-addons/vc-blocks-load.php');
 //Theme Shortcode Insert
 require_once(UXSTOCK_ACC_PATH.'theme-shortcode/slide-shortcode.php');
 require_once(UXSTOCK_ACC_PATH.'theme-shortcode/logo-carousel-shortcode.php');
+require_once(UXSTOCK_ACC_PATH.'theme-shortcode/service-shortcode.php');
 //require_once(UXSTOCK_ACC_PATH.'theme-shortcode/service-shortcode.php');
 
 //Shortcode Dependence On Visual Composer

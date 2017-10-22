@@ -3,15 +3,15 @@
 
     function uxstock_logo_carosual_shortcode($atts){
      extract( shortcode_atts( array(
-        'logos' => '',
-         'dextop_count' => 5,
-         'tablet_count' => 3,
-         'mobile_count' => 2,
-         'loop'=> false,
-         'autoplay' => false,
-         'autoplaytimeout' => 3000,
-         'nav' => false,
-         'dots' => false,
+        'logos' =>'',
+         'dextop_count' =>5,
+         'tablet_count' =>3,
+         'mobile_count' =>2,
+         'loop'=>'true',
+         'autoplay' =>'true',
+         'autoplaytimeout' =>3000,
+         'nav' =>'true',
+         'dots' =>'true',
     ), $atts) );
     
     $logo_ids = explode(',',$logos);
@@ -19,8 +19,8 @@
     $uxstock_logo_carosual_markup = '
      <script>
             jQuery(window).load(function(){
-                jQuery(".uxstock_logo_carousel").owlCarousel({
-                    items:1,
+                jQuery(".uxstock-logo-carosual").owlCarousel({
+                    items:5,
                     loop:'.$loop.',
                     autoplay:'.$autoplay.',
                     autoplayTimeout:'.$autoplaytimeout.',

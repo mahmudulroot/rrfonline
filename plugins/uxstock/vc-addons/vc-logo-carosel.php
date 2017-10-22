@@ -40,7 +40,7 @@
             "type" => "dropdown",
             "heading" => __( "Enable loop", "my-text-domain" ),
             "param_name" => "loop",
-            "std" => __( "false", "my-text-domain" ),
+            "std" => __( "true", "my-text-domain" ),
             "value" => array(
                   'yes'=>'true',
                   'No'=>'false' 
@@ -52,7 +52,7 @@
             "type" => "dropdown",
             "heading" => __( "Enable autoplay", "my-text-domain" ),
             "param_name" => "autoplay",
-            "std" => __( "false", "my-text-domain" ),
+            "std" => __( "true", "my-text-domain" ),
             "value" => array(
                   'yes'=>'true',
                   'No'=>'false'
@@ -95,7 +95,7 @@
             "type" => "dropdown",
             "heading" => __( "Enable Navigation Icon", "my-text-domain" ),
             "param_name" => "nav",
-            "std" => __( "false", "my-text-domain" ),
+            "std" => __( "true", "my-text-domain" ),
             "value" => array(
                   'yes'=>'true',
                   'No'=>'false'
@@ -108,7 +108,7 @@
             "type" => "dropdown",
             "heading" => __( "Enable dots", "my-text-domain" ),
             "param_name" => "dots",
-            "std" => __( "false", "my-text-domain" ),
+            "std" => __( "true", "my-text-domain" ),
             "value" => array(
                   'yes'=>'true',
                   'No'=>'false'
