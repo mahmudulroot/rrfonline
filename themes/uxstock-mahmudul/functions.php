@@ -126,6 +126,8 @@ add_action( 'widgets_init', 'uxstock_mahmudul_widgets_init' );
 add_theme_support( 'post-thumbnails' );
 /**
  * Enqueue scripts and styles.
+ * 
+ * 
  */
 function uxstock_mahmudul_scripts() {
 
@@ -133,7 +135,6 @@ function uxstock_mahmudul_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '3.7.3');
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.7.0');
 	wp_enqueue_style( 'uxstock-mahmudul-style', get_stylesheet_uri() );
-
 
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), '3.7.3', true );

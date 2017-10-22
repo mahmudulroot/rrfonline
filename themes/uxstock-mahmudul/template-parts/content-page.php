@@ -6,17 +6,50 @@
  *
  * @package uxstock
  */
-
+ if(get_post_meta($post->ID,'uxsock_page_options',true)){
+      $page_meta =get_post_meta($post->ID,'uxsock_page_options',true);
+     
+ }else{
+      $page_meta = array();
+ }
+  
+    
+    if(array_key_exists('enable_title', $page_meta)){
+        
+       $enable_title = $page_meta ['enable_title']; 
+       
+    }else{
+        
+       $enable_title = true;
+    }
+    
+     if(array_key_exists('enable_content', $page_meta)){
+         
+       $enable_content = $page_meta ['enable_content']; 
+       
+    }else{
+        
+       $enable_content = false;
+    }
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    
+        <?php if($enable_title == true):?>
+        
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+	<?php endif;?>
 
 	<div class="entry-content">
 		<?php
-			the_content();
+		    if($enable_content == true){
+		        
+		        	the_content();
+		    }
+		
+		
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'uxstock-mahmudul' ),

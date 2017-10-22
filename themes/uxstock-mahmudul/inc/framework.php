@@ -29,7 +29,7 @@ function uxstock_framework_options( $options ) {
           'default'=>'true',
           'desc' =>esc_html__('If You Want to Enablr title .','uxstock-selim'),
              ),
-             array(
+        array(
           'id'    => 'enable_content',
           'type'  => 'switcher',
           'title' => 'Enable Title',
@@ -125,7 +125,8 @@ $options[]    = array(
           'id'    => 'enable_overly',
           'type'  => 'switcher',
           'title' => 'Enable Overly',
-          'default'=>'true'
+          'default'=>'true',
+          
             
           ),
           
@@ -133,8 +134,9 @@ $options[]    = array(
           'id'    => 'overly_percentage',
           'type'  => 'text',
           'title' => 'Overly Percentage',
-          'default'=>'70',
-          'desc'=>'Type overly Percentage in number'
+          'default'=>'.7',
+          'desc'=>'Type overly Percentage in number',
+           'dependency'=>array('enable_overly','==','true' ),
             
           ),
           
@@ -143,6 +145,7 @@ $options[]    = array(
           'type'  => 'color_picker',
           'title' => 'Overly Color',
           'default'=>'#181a1f',
+           'dependency'=>array('enable_overly','==','true' ),
             
           ),
           
@@ -157,4 +160,3 @@ $options[]    = array(
 }
 
 add_filter( 'cs_metabox_options', 'uxstock_framework_options' );
-
